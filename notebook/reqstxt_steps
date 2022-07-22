@@ -1,0 +1,11 @@
+Steps to get requirements.txt from jupyter notebook
+
+1) From dir where notebook exists, pip install pipreqs
+
+2) Comment out all conda installs from nb, pipreqs only needs imports in py
+jupyter nbconvert --to=python handwriting.ipynb 
+
+3) This will create a handwriting.py file
+pipreqs ./
+
+This will generate the requirements file.
