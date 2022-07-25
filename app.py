@@ -81,21 +81,21 @@ app.layout = html.Div(children=[
             html.Br(),
 
             html.Div([
-                html.H3('Handwriting Image: '),
+                html.H3('Handwriting Image'),
                 html.Br(),
                 html.Div(html.Img(id='my-image', width=400), className="five columns"),
                 html.Br(),
             ], className='three columns'),
 
             html.Div([
-                html.H3('Name: '),
+                html.H3('Name'),
                 html.Br(),
                 html.H6(id='name-written', children='...'),
                 html.Br(),
             ], className='three columns'),
 
             html.Div([
-                html.H3('Recognized as: '),
+                html.H3('Recognized as'),
                 html.Br(),
                 html.H6(id='name-prediction', children='...'),
                 html.Br(),
