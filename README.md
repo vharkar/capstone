@@ -14,14 +14,14 @@
 1. notebook/handwriting.ipynb : Data Exploration, model creation, training & save.
 2. assets/written_name_test_v2.csv : the mapping of names to images
 3. assets/handwriting-model-1.h5: the saved model.
-4. 
+4. images/test - has the test images.
 
 
 ### App
 ```
-1. The app allows the user to select an input numer.
+1. The app allows the user to select a number (the range is the number of test files).
 2. This number is used to lookup the ground truth name & its corresponding image from the csv test file.
-3. The app uses tha trained model to predict the name from the given image.
+3. The app predicts the name from the image with the trained model.
 4. Finally, the image, ground truth name and predicted name are displayed.
 ```
 
