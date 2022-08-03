@@ -19,6 +19,7 @@
 6. my_images - has images I generated
 7. tmp_images - a tmp dir to place converted images.
 8. app-new.py - final version of app
+9. CapstonePresentation.key - a brief presentation.
 
 
 ### App
