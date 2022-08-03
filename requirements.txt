@@ -7,3 +7,4 @@ numpy==1.22.3
 opencv_python==4.6.0.66
 pandas==1.1.5
 tensorflow-cpu==2.9.1
+gunicorn==20.1.0
