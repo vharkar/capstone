@@ -6,37 +6,33 @@ from dash_canvas import DashCanvas
 canvas_width = 200
 canvas_height = 200
 
-tab_2_layout = html.Div([
-
+tab_4_layout = html.Div([
     html.Div([
-        html.H3('Recognize name from canvas image'),
+        html.H3('Recognize name from converted text'),
         html.Div([
-            html.H3('Canvas'),
+            html.H3('Input Name:'),
             html.Br(),
             html.Br(),
             html.Br(),
-            DashCanvas(
-                id='tab2-namedraw',
-                lineWidth=2,
-                lineColor='rgba(255, 0, 0, 0.5)',
-                width=canvas_width,
-                height=canvas_height,
-                hide_buttons=["zoom", "pan", "line", "pencil", "rectangle", "select"],
-                goButtonTitle='Submit',
+            dcc.Textarea(
+                id='tab4-text',
+                value='',
+                style={'width': '50%', 'height': 10},
             ),
+            html.Div(id='tab4-written', style={'whiteSpace': 'pre-line'}),
         ], style={"padding-left": "20px", "align": "left"}, className="three columns"),
 
         html.Div([
-            html.H3('Image from Canvas'),
+            html.H3('Image from text'),
             html.Br(),
-            html.Div(html.Img(id='tab2-image', width=300), className="five columns"),
+            html.Div(html.Img(id='tab4-image', width=500), className="five columns"),
             html.Br(),
         ], className='three columns'),
 
         html.Div([
             html.H3('Recognized Image as..'),
             html.Br(),
-            html.H6(id='tab2-name-prediction', children=''),
+            html.H6(id='tab4-name-prediction', children=''),
             html.Br(),
         ], className='three columns'),
     ], className="twelve columns"),

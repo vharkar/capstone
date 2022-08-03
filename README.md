@@ -13,20 +13,36 @@
 ### Project Structure
 1. notebook/handwriting.ipynb : Data Exploration, model creation, training & save.
 2. assets/written_name_test_v2.csv : the mapping of names to images
-3. assets/handwriting-model-1.h5: the saved model.
-4. images/test - has the test images.
+3. assets/created_names.csv : the mapping of names to images that I created
+4. assets/handwriting-model-1.h5: the saved model.
+5. images/test - has the test images.
+6. my_images - has images I generated
+7. tmp_images - a tmp dir to place converted images.
+8. app-new.py - final version of app
 
 
 ### App
 ```
-1. The app allows the user to select a number (the range is the number of test files).
-2. This number is used to lookup the ground truth name & its corresponding image from the csv test file.
-3. The app predicts the name from the image with the trained model.
-4. Finally, the image, ground truth name and predicted name are displayed.
+1. The app (app-new.py) has 4 tabs.
+2. Tab 1 
+  * User selects a number (the range is the number of test files checked in to git = 100).
+  * This number is used to lookup the ground truth name & its corresponding image from the csv test file.
+  * The app predicts the name from the image with the trained model.
+  * Finally, the image, ground truth name and predicted name are displayed.
+3. Tab 2
+  * A canvas to take in handwritten text and predict the name.
+4. Tab 3
+  * Names predicted from img files (9 total) created with img preview (same methodology as Tab 1)
+5 Tab 4
+  * Names predicted from text -> converted to handwriting type image.  
 ```
 
 ### Notes
 - I followed methodologies from a couple of kaggle notebooks to derive the NN layers and the CTC loss function.
 - The model is trained on approximately 330,000 images. (It look 12+ hrs on my mac, ran local cpu)
-- I tried creating some test files with handwritten names (using mac img preview) & the model does not seem to predict them very well.
-- It works much better on the test data.
+- The model works well on the test data.
+- I tried the following strategies to predict names from user created images:
+  - predict from canvas image 
+  - creating image files with handwritten names (using mac img preview)
+  - convert a text name to handwriting image with ImgKit
+- In either of the above, the model does not seem to predict them very well.
