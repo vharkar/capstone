@@ -67,10 +67,10 @@ app.layout = html.Div(children=[
         html.Div([
 
             html.Div([
-                html.H4('Pick number between 1 and 41370 (there are 41370 test files)'),
+                html.H4('Pick number between 1 and 100 (there are 100 test files)'),
                 daq.NumericInput(
                     id='file_num',
-                    value=0, min=0, max=41370, size=120
+                    value=0, min=0, max=100, size=50
                 ),
                 html.Br(),
                 html.Br(),
